@@ -65,7 +65,7 @@ public class RegistrationPage {
 	{
 		try
 		{
-			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(success));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(success));
 			return true;
 		}catch(TimeoutException e)
 		{
