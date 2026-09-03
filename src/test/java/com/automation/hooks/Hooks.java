@@ -1,7 +1,9 @@
-package com.automation.context;
+package com.automation.hooks;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+
+import com.automation.context.TestContext;
 import com.automation.driverFactory.DriverFactory;
 
 import io.cucumber.java.After;
@@ -29,7 +31,7 @@ public class Hooks {
 		if(scenario.isFailed())
 		{
 			byte[] srcFile = ((TakesScreenshot)DriverFactory.getDriver()).getScreenshotAs(OutputType.BYTES);
-			scenario.attach(srcFile,"image/png" ,scenario.getName());
+			scenario.attach(srcFile,"image/png" ,"failure-screenshot");
 		}
 		
 		DriverFactory.quitDriver();
