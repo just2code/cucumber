@@ -2,6 +2,8 @@ package com.automation.stepdefinition;
 
 import static org.testng.Assert.assertEquals;
 
+import org.testng.Assert;
+
 import com.automation.context.TestContext;
 
 import io.cucumber.java.en.Given;
