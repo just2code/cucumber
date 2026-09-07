@@ -25,7 +25,7 @@ public class LoginSteps {
 		context.getLoginPage().navigateTo();
 	}
 	
-	@When("the user logs in wuth username {string} and password {string}")
+	@When("the user logs in with username {string} and password {string}")
 	public void userEntersLoginCredentials(String userName,String password)
 	{
 		context.getLoginPage().enterUserName(userName);
@@ -36,7 +36,7 @@ public class LoginSteps {
 	@Then("an error message should be displayed")
 	public void loginErrorMessageDisplayed()
 	{
-		Assert.assertEquals(context.getLoginPage().isErrorMessageDisplayed(),true);
+		Assert.assertTrue(context.getLoginPage().isErrorMessageDisplayed());
 	}
 
 }
