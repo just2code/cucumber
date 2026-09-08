@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -20,6 +21,11 @@ public class RegistrationPage {
 	By mobile = By.id("userNumber");
 	By submitButton = By.id("submit");
 	By success = By.id("example-modal-sizes-title-lg");
+	By male = By.xpath("//input[@value='Male']");
+	By female = By.xpath("//input[@value='Female']");
+	By other = By.xpath("//input[@value='Other']");
+	//Thanks for submitting the form
+	//closeLargeModal
 	
 	public RegistrationPage(WebDriver driver)
 	{
@@ -54,11 +60,78 @@ public class RegistrationPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mobile)).sendKeys(strMobileNumber);
 	}
 	
+	public void selectGender(String gender)
+	{
+		if(gender.equalsIgnoreCase("male"))
+		{
+			wait.until(ExpectedConditions.elementToBeClickable(male)).click();
+		}else if(gender.equalsIgnoreCase("female"))
+		{
+			wait.until(ExpectedConditions.elementToBeClickable(female)).click();
+		}else 
+		{
+			wait.until(ExpectedConditions.elementToBeClickable(other)).click();
+		}
+			
+	}
+	
 	public void clickSubmitButton()
 	{
+		WebElement submit = wait.until(ExpectedConditions.elementToBeClickable(submitButton));
+		System.out.println("Before scroll");
+		System.out.println("Is displayed: "+submit.isDisplayed());
+		System.out.println("Is enabled: "+submit.isEnabled());
+		System.out.println("Location: "+submit.getLocation());
+		//System.out.println("BoundingLocation: "+ submit.ge );
+		System.out.println("Size: "+submit.getSize());
+		
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].scrollIntoView(true);",driver.findElement(submitButton));
-		wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
+		js.executeScript("arguments[0].scrollIntoView({block : 'center'});",driver.findElement(submitButton));
+		System.out.println("After scroll");
+		System.out.println("Location: "+submit.getLocation());
+		
+		//wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
+		//for diagnosis
+		 js = (JavascriptExecutor) driver;
+
+		String rect = (String) js.executeScript("""
+		    const r = arguments[0].getBoundingClientRect();
+
+		    return `top=${r.top}, bottom=${r.bottom}, ` +
+		           `left=${r.left}, right=${r.right}, ` +
+		           `width=${r.width}, height=${r.height}, ` +
+		           `viewportHeight=${window.innerHeight}, ` +
+		           `viewportWidth=${window.innerWidth}`;
+		    """, submit);
+
+		System.out.println("Button viewport position: " + rect);
+
+			//System.out.println("Element at button center:");
+			//System.out.println(elementAtPoint);
+		
+		String scrollInfo = (String) js.executeScript("""
+			    let el = arguments[0];
+			    let result = [];
+
+			    while (el) {
+			        result.push(
+			            el.tagName +
+			            " | class=" + el.className +
+			            " | scrollHeight=" + el.scrollHeight +
+			            " | clientHeight=" + el.clientHeight +
+			            " | overflowY=" +
+			            getComputedStyle(el).overflowY
+			        );
+
+			        el = el.parentElement;
+			    }
+
+			    return result.join("\\n");
+			    """, submit);
+
+			System.out.println("Scroll hierarchy:");
+			System.out.println(scrollInfo);
+		submit.click();
 	}
 	
 	public boolean isConfirmationDisplayed()

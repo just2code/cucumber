@@ -40,7 +40,8 @@ public class RegistrationSteps {
 			context.getRegistrationPage().enterFirstName(row.get("firstName"));
 			context.getRegistrationPage().enterLastName(row.get("lastName"));
 			context.getRegistrationPage().enterUserEmail(row.get("email"));
-			context.getRegistrationPage().enterMobileNumber(row.get("mobile"));		
+			context.getRegistrationPage().enterMobileNumber(row.get("mobile"));	
+			context.getRegistrationPage().selectGender(row.get("gender"));
 			context.getRegistrationPage().clickSubmitButton();
 	}
 	

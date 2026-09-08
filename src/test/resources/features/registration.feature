@@ -7,4 +7,5 @@ When the user submits the registration form with the following details:
 |lastName|pereira|
 |email|joyceP@gmail.com|
 |mobile|3467878346298|
+|gender|male|
 Then the registration should be successful
