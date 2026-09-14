@@ -2,26 +2,26 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-09-14T18:12:53 IST" name="Default suite" finished-at="2026-09-14T18:13:03 IST" duration-ms="10692">
+  <suite started-at="2026-09-14T22:59:59 IST" name="Suite" finished-at="2026-09-14T23:00:15 IST" duration-ms="15659">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.automation.runners.TestRunner@4b8d604b]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.automation.runners.TestRunner@cc43f62]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-09-14T18:12:53 IST" name="Default test" finished-at="2026-09-14T18:13:03 IST" duration-ms="10692">
+    <test started-at="2026-09-14T22:59:59 IST" name="Test" finished-at="2026-09-14T23:00:15 IST" duration-ms="15659">
       <class name="com.automation.runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.automation.runners.TestRunner@4b8d604b]" started-at="2026-09-14T18:12:53 IST" name="setUpClass" finished-at="2026-09-14T18:12:53 IST" duration-ms="652" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.automation.runners.TestRunner@cc43f62]" started-at="2026-09-14T22:59:59 IST" name="setUpClass" finished-at="2026-09-14T23:00:00 IST" duration-ms="795" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7d17ee50]]>
+                <![CDATA[org.testng.TestRunner@1d98daa0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.automation.runners.TestRunner@4b8d604b]" started-at="2026-09-14T18:12:53 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-09-14T18:13:03 IST" duration-ms="9905" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.automation.runners.TestRunner@cc43f62]" started-at="2026-09-14T23:00:00 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-09-14T23:00:15 IST" duration-ms="14728" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -41,10 +41,10 @@
 Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [25414e7ba0abeb63831eb4bb39cea65d, clickElement {id=f.9696D48C428C7DCAAFE24A6931DC9EFD.d.8960A05C5D2C614A9739971D27561701.e.54}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.83, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\rmano\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50599}, goog:processID: 1300, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50599/devtoo..., se:cdpVersion: 152.0.7977.83, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (25414e7ba0abeb63831eb4bb39cea65d)] -> id: submit]
-Session ID: 25414e7ba0abeb63831eb4bb39cea65d]]>
+Command: [75818cdf8c765454195d730c41553343, clickElement {id=f.244139FA6489528831AEC0F37727520C.d.A1CE5EE900501D26C5898A65BB64735E.e.60}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.83, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\rmano\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63327}, goog:processID: 22412, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63327/devtoo..., se:cdpVersion: 152.0.7977.83, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (75818cdf8c765454195d730c41553343)] -> id: submit]
+Session ID: 75818cdf8c765454195d730c41553343]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (1037, 824)
@@ -52,10 +52,10 @@ Session ID: 25414e7ba0abeb63831eb4bb39cea65d]]>
 Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [25414e7ba0abeb63831eb4bb39cea65d, clickElement {id=f.9696D48C428C7DCAAFE24A6931DC9EFD.d.8960A05C5D2C614A9739971D27561701.e.54}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.83, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\rmano\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50599}, goog:processID: 1300, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50599/devtoo..., se:cdpVersion: 152.0.7977.83, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (25414e7ba0abeb63831eb4bb39cea65d)] -> id: submit]
-Session ID: 25414e7ba0abeb63831eb4bb39cea65d
+Command: [75818cdf8c765454195d730c41553343, clickElement {id=f.244139FA6489528831AEC0F37727520C.d.A1CE5EE900501D26C5898A65BB64735E.e.60}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.83, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\rmano\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63327}, goog:processID: 22412, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63327/devtoo..., se:cdpVersion: 152.0.7977.83, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (75818cdf8c765454195d730c41553343)] -> id: submit]
+Session ID: 75818cdf8c765454195d730c41553343
 at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
 at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
 at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -65,7 +65,7 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverComman
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:653)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:225)
 at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
-at com.automation.pages.RegistrationPage.clickSubmitButton(RegistrationPage.java:117)
+at com.automation.pages.RegistrationPage.clickSubmitButton(RegistrationPage.java:116)
 at com.automation.stepdefinition.RegistrationSteps.userSubmitsRegistrationForm(RegistrationSteps.java:45)
 at ✽.the user submits the registration form with the following details:(file:///C:/Users/rmano/eclipse-workspace/cucumber/src/test/resources/features/registration.feature:5)
 ]]>
@@ -74,11 +74,11 @@ at ✽.the user submits the registration form with the following details:(file:/
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.automation.runners.TestRunner@4b8d604b]" started-at="2026-09-14T18:13:03 IST" name="tearDownClass" finished-at="2026-09-14T18:13:03 IST" duration-ms="77" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.automation.runners.TestRunner@cc43f62]" started-at="2026-09-14T23:00:15 IST" name="tearDownClass" finished-at="2026-09-14T23:00:15 IST" duration-ms="86" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- com.automation.runners.TestRunner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
