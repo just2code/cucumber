@@ -82,7 +82,6 @@ public class RegistrationPage {
 		System.out.println("Is displayed: "+submit.isDisplayed());
 		System.out.println("Is enabled: "+submit.isEnabled());
 		System.out.println("Location: "+submit.getLocation());
-		//System.out.println("BoundingLocation: "+ submit.ge );
 		System.out.println("Size: "+submit.getSize());
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
