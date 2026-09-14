@@ -85,52 +85,35 @@ public class RegistrationPage {
 		//System.out.println("BoundingLocation: "+ submit.ge );
 		System.out.println("Size: "+submit.getSize());
 		
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].scrollIntoView({block : 'center'});",driver.findElement(submitButton));
-		System.out.println("After scroll");
-		System.out.println("Location: "+submit.getLocation());
-		
-		//wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
-		//for diagnosis
-		 js = (JavascriptExecutor) driver;
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-		String rect = (String) js.executeScript("""
-		    const r = arguments[0].getBoundingClientRect();
-
-		    return `top=${r.top}, bottom=${r.bottom}, ` +
-		           `left=${r.left}, right=${r.right}, ` +
-		           `width=${r.width}, height=${r.height}, ` +
-		           `viewportHeight=${window.innerHeight}, ` +
-		           `viewportWidth=${window.innerWidth}`;
-		    """, submit);
-
-		System.out.println("Button viewport position: " + rect);
-
-			//System.out.println("Element at button center:");
-			//System.out.println(elementAtPoint);
-		
-		String scrollInfo = (String) js.executeScript("""
-			    let el = arguments[0];
+		String scrollableElements = (String) js.executeScript("""
 			    let result = [];
 
-			    while (el) {
-			        result.push(
-			            el.tagName +
-			            " | class=" + el.className +
-			            " | scrollHeight=" + el.scrollHeight +
-			            " | clientHeight=" + el.clientHeight +
-			            " | overflowY=" +
-			            getComputedStyle(el).overflowY
-			        );
+			    document.querySelectorAll('*').forEach((el, index) => {
+			        const style = getComputedStyle(el);
 
-			        el = el.parentElement;
-			    }
+			        if (
+			            el.scrollHeight > el.clientHeight &&
+			            ['auto', 'scroll'].includes(style.overflowY)
+			        ) {
+			            result.push(
+			                index +
+			                " | " + el.tagName +
+			                " | class=" + el.className +
+			                " | scrollTop=" + el.scrollTop +
+			                " | scrollHeight=" + el.scrollHeight +
+			                " | clientHeight=" + el.clientHeight +
+			                " | overflowY=" + style.overflowY
+			            );
+			        }
+			    });
 
 			    return result.join("\\n");
-			    """, submit);
+			""");
 
-			System.out.println("Scroll hierarchy:");
-			System.out.println(scrollInfo);
+			System.out.println("========== SCROLLABLE ELEMENTS ==========");
+			System.out.println(scrollableElements);
 		submit.click();
 	}
 	
